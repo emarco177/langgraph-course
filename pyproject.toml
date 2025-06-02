@@ -1,0 +1,15 @@
+[project]
+name = "langgraph-course"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "black>=26.10.1",
+    "isort>=9.0.2",
+    "langchain>=1.5.2",
+    "langchain-openai>=1.8.5",
+    "langchain-tavily>=0.2.18",
+    "langgraph>=1.2.24",
+    "python-dotenv>=1.2.4",
+]

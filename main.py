@@ -3,22 +3,24 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from langchain_core.messages import HumanMessage
-from langgraph.graph import END, MessageGraph
+from langgraph.graph import END, MessagesState, StateGraph
 from langgraph.prebuilt import ToolNode
+
 from nodes import run_agent_reasoning_engine
 from react import tools
 
 AGENT_REASON = "agent_reason"
 ACT = "act"
+LAST = -1
 
 
 def should_continue(state: dict) -> str:
-    if not state[-1].tool_calls:
+    if not state["messages"][LAST].tool_calls:
         return END
     return ACT
 
 
-flow = MessageGraph()
+flow = StateGraph(MessagesState)
 
 flow.add_node(AGENT_REASON, run_agent_reasoning_engine)
 flow.set_entry_point(AGENT_REASON)
@@ -42,6 +44,12 @@ app.get_graph().draw_mermaid_png(output_file_path="graph.png")
 if __name__ == "__main__":
     print("Hello ReAct with LangGraph")
     res = app.invoke(
-        HumanMessage(content="what is the weather in sf? List it and then Triple it ")
+        {
+            "messages": [
+                HumanMessage(
+                    content="what is the weather in sf? List it and then Triple it "
+                )
+            ]
+        }
     )
-    print(res[-1].content)
+    print(res["messages"][LAST].content)

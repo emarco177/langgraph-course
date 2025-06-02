@@ -1,11 +1,18 @@
 from dotenv import load_dotenv
-from langchain_core.messages import BaseMessage
-from react import llm, SYSTEM_MESSAGE
+from langgraph.graph import MessagesState
+
+from react import llm
 
 load_dotenv()
 
+SYSTEM_MESSAGE = """
+You are a helpful assistant that can use tools to answer questions.
+"""
 
-def run_agent_reasoning_engine(state: list[BaseMessage]) -> list[BaseMessage]:
-    response = llm.invoke([{"role": "system", "content": SYSTEM_MESSAGE}, *state])
 
-    return [response]
+def run_agent_reasoning_engine(state: MessagesState) -> MessagesState:
+    response = llm.invoke(
+        [{"role": "system", "content": SYSTEM_MESSAGE}, *state["messages"]]
+    )
+
+    return {"messages": [response]}

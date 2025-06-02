@@ -6,11 +6,6 @@ from langchain_tavily import TavilySearch
 load_dotenv()
 
 
-SYSTEM_MESSAGE = """
-You are a helpful assistant that can use tools to answer questions.
-"""
-
-
 @tool
 def triple(num: float) -> float:
     """

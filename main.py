@@ -4,10 +4,8 @@ load_dotenv()
 
 from langchain_core.messages import HumanMessage
 from langgraph.graph import END, MessagesState, StateGraph
-from langgraph.prebuilt import ToolNode
 
-from nodes import run_agent_reasoning_engine
-from react import tools
+from nodes import run_agent_reasoning_engine, tool_node
 
 AGENT_REASON = "agent_reason"
 ACT = "act"
@@ -24,7 +22,7 @@ flow = StateGraph(MessagesState)
 
 flow.add_node(AGENT_REASON, run_agent_reasoning_engine)
 flow.set_entry_point(AGENT_REASON)
-flow.add_node(ACT, ToolNode(tools))
+flow.add_node(ACT, tool_node)
 
 
 flow.add_conditional_edges(

@@ -1,7 +1,8 @@
 from dotenv import load_dotenv
 from langgraph.graph import MessagesState
+from langgraph.prebuilt import ToolNode
 
-from react import llm
+from react import llm, tools
 
 load_dotenv()
 
@@ -16,3 +17,6 @@ def run_agent_reasoning_engine(state: MessagesState) -> MessagesState:
     )
 
     return {"messages": [response]}
+
+
+tool_node = ToolNode(tools)

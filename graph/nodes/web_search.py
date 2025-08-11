@@ -15,6 +15,8 @@ def web_search(state: GraphState) -> Dict[str, Any]:
     question = state["question"]
     if "documents" in state: # if the route to web search in first time then give error
         documents = state["documents"]
+    else:
+        documents = None
         
     tavily_results = web_search_tool.invoke({"query": question})["results"]
     joined_tavily_result = "\n".join(

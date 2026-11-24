@@ -14,9 +14,16 @@ dependencies = [
     "langchain-text-splitters>=1.1.3",
     "langchain-unstructured>=1.0.1",
     "langgraph>=1.2.24",
+    "langgraph-cli[inmem]>=0.4.43",
     "pydantic>=2.14.4",
     "pytest>=9.2.0",
     "python-dotenv>=1.2.4",
     "tiktoken>=0.14.0",
     "unstructured>=0.27.37",
 ]
+
+[tool.setuptools]
+py-modules = ["ingestion"]
+
+[tool.setuptools.packages.find]
+include = ["graph*"]

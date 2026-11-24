@@ -117,3 +117,6 @@ venv.bak/
 
 # Windows
 Thumbs.db
+
+# LangGraph dev server state
+.langgraph_api/

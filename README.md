@@ -77,6 +77,14 @@ Install dependencies:
 uv sync
 ```
 
+Run the graph as a local Agent Server (LangSmith Studio and the server API):
+
+```bash
+uv run langgraph dev
+```
+
+`langgraph.json` tells the server where the compiled graph is (`./graph/graph.py:app`). The vector store is not in the repository: build it once by uncommenting the `Chroma.from_documents` block in `ingestion.py` and running `uv run ingestion.py`.
+
 Follow along with each commit to learn the process of building an Agentic RAG system:
 
 ```bash

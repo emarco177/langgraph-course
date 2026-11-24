@@ -93,10 +93,10 @@ This project is built incrementally across multiple video lessons. Each commit r
 
 | Lesson | Commit | Description |
 |--------|--------|-------------|
-| 1 | [efc7819](https://github.com/emarco177/langgaph-course/commit/efc7819) | **Getting Started**: Initial setup for the reflection agent |
-| 2 | [446b7b4](https://github.com/emarco177/langgaph-course/commit/446b7b4) | **Project Structure**: Adding core files and dependencies with uv |
-| 3 | [f637527](https://github.com/emarco177/langgaph-course/commit/f637527) | **Chain Implementation**: Building Twitter influencer prompts and generation logic |
-| 4 | [d030816](https://github.com/emarco177/langgaph-course/commit/d030816) | **Graph Implementation**: Connecting nodes with conditional logic for feedback loops |
+| 1 | [efc7819](https://github.com/emarco177/langgraph-course/commit/efc7819) | **Getting Started**: Initial setup for the reflection agent |
+| 2 | [446b7b4](https://github.com/emarco177/langgraph-course/commit/446b7b4) | **Project Structure**: Adding core files and dependencies with uv |
+| 3 | [f637527](https://github.com/emarco177/langgraph-course/commit/f637527) | **Chain Implementation**: Building Twitter influencer prompts and generation logic |
+| 4 | [d030816](https://github.com/emarco177/langgraph-course/commit/d030816) | **Graph Implementation**: Connecting nodes with conditional logic for feedback loops |
 
 Each lesson builds on the previous one, demonstrating how to incrementally build a reflection agent architecture using LangGraph.
 

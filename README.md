@@ -37,23 +37,23 @@ graph LR;
 
 This repository is organized as a series of commits, each representing a lesson in building the ReAct agent:
 
-1. [**Project Setup**](https://github.com/emarco177/langgaph-course/commit/f9d7eac35b789cf86282e1a188d2889f2a66bc9b): Initial repository structure and environment configuration
+1. [**Project Setup**](https://github.com/emarco177/langgraph-course/commit/f9d7eac35b789cf86282e1a188d2889f2a66bc9b): Initial repository structure and environment configuration
    - Initialize project with main application file and Poetry configuration
    - Add dependencies for LangChain, LangGraph, and dotenv support
 
-2. [**React Implementation**](https://github.com/emarco177/langgaph-course/commit/2415ad2710a112fd735020a2f99f073d0483b905): Building the core agent functionality
+2. [**React Implementation**](https://github.com/emarco177/langgraph-course/commit/2415ad2710a112fd735020a2f99f073d0483b905): Building the core agent functionality
    - Create react.py for ReAct agent implementation 
    - Add tools and prompt integration
 
-3. [**State Management**](https://github.com/emarco177/langgaph-course/commit/478dd4e52447c4140a97ce899172f1a6c26506f9): Creating state tracking for the agent
+3. [**State Management**](https://github.com/emarco177/langgraph-course/commit/478dd4e52447c4140a97ce899172f1a6c26506f9): Creating state tracking for the agent
    - Add AgentState class to state.py
    - Implement state management for agent actions and outcomes
 
-4. [**Agent Nodes**](https://github.com/emarco177/langgaph-course/commit/ef2a0779e97e585bb7bdd5ec43dae1b0a3fddd16): Setting up the graph nodes
+4. [**Agent Nodes**](https://github.com/emarco177/langgraph-course/commit/ef2a0779e97e585bb7bdd5ec43dae1b0a3fddd16): Setting up the graph nodes
    - Add nodes.py to implement agent reasoning
    - Create tool execution logic components
 
-5. [**Graph Construction**](https://github.com/emarco177/langgaph-course/commit/b8b115d1ca36887eb1a332491d94a02438b70de6): Building the complete LangGraph workflow
+5. [**Graph Construction**](https://github.com/emarco177/langgraph-course/commit/b8b115d1ca36887eb1a332491d94a02438b70de6): Building the complete LangGraph workflow
    - Add graph generation functionality to main.py
    - Update model in react.py for full integration
 
@@ -64,28 +64,28 @@ To run this project, you will need to add the following environment variables to
 ```bash
 OPENAI_API_KEY=your_openai_api_key_here
 TAVILY_API_KEY=your_tavily_api_key_here  # If using Tavily for search
-LANGCHAIN_API_KEY=your_langchain_api_key_here  # Optional, for tracing
-LANGCHAIN_TRACING_V2=true                      # Optional
-LANGCHAIN_PROJECT=react agent                  # Optional
+LANGSMITH_API_KEY=your_langsmith_api_key_here  # Optional, for tracing
+LANGSMITH_TRACING=true                         # Optional
+LANGSMITH_PROJECT=react-agent                  # Optional
 ```
 
-> **Important Note**: If you enable tracing by setting `LANGCHAIN_TRACING_V2=true`, you must have a valid LangSmith API key set in `LANGCHAIN_API_KEY`. Without a valid API key, the application will throw an error.
+> **Important Note**: If you enable tracing by setting `LANGSMITH_TRACING=true`, you must have a valid LangSmith API key set in `LANGSMITH_API_KEY`. Without a valid API key, the application will throw an error.
 
 ## Getting Started
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/emarco177/langgaph-course.git
-cd langgaph-course
+git clone https://github.com/emarco177/langgraph-course.git
+cd langgraph-course
 ```
 
-Install dependencies:
+Check out this branch and install the dependencies with [uv](https://docs.astral.sh/uv/):
 
 ```bash
-pip install -r requirements.txt
-# or if using Poetry:
-poetry install
+git checkout project/ReAct-agent
+uv sync
+uv run main.py
 ```
 
 Follow along with each commit to learn the process of building a ReAct agent:

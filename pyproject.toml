@@ -1,22 +1,15 @@
-[tool.poetry]
-name = "langgraph-react"
+[project]
+name = "react-agent"
 version = "0.1.0"
-description = ""
-authors = ["Eden Marco <emarco177@gmail.com>"]
+description = "ReAct agent with LangGraph and function calling"
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.10"
-langchain = "*"
-langgraph = "*"
-langchain-openai = "*"
-langchainhub = "*"
-black = "*"
-isort = "*"
-python-dotenv = "*"
-langchain-tavily = "*"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires-python = ">=3.13"
+dependencies = [
+    "black>=26.10.1",
+    "isort>=9.0.2",
+    "langchain>=1.5.2",
+    "langchain-openai>=1.8.5",
+    "langchain-tavily>=0.2.18",
+    "langgraph>=1.2.24",
+    "python-dotenv>=1.2.4",
+]

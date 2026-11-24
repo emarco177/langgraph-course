@@ -14,7 +14,7 @@ from langchain_openai import ChatOpenAI
 
 from schemas import AnswerQuestion, ReviseAnswer
 
-llm = ChatOpenAI(model="o4-mini")
+llm = ChatOpenAI(model="gpt-6.2-sol")
 parser = JsonOutputToolsParser(return_id=True)
 parser_pydantic = PydanticToolsParser(tools=[AnswerQuestion])
 

@@ -95,7 +95,6 @@ workflow.add_conditional_edges(
     },
 )
 workflow.add_edge(WEBSEARCH, GENERATE)
-workflow.add_edge(GENERATE, END)
 
 app = workflow.compile()
 

@@ -9,7 +9,7 @@ See Original YouTube video:[Advance RAG control flow with Mistral and LangChain]
 of [Sophia Young](https://x.com/sophiamyang) from Mistral & [Lance Martin](https://x.com/RLanceMartin) from LangChain
 
 ![Logo](https://github.com/emarco177/langgraph-course/blob/project/agentic-rag/static/Langgraph%20Adaptive%20Rag.png)
-[![udemy](https://img.shields.io/badge/LangGraph🦜🔗%20Udemy%20Course-%20Coupon%20%2412.99-brightgreen)](https://www.udemy.com/course/langgraph/?couponCode=APRIL-2025)
+[![udemy](https://img.shields.io/badge/LangGraph🦜🔗%20Udemy%20Course-%20Coupon%20%2412.99-brightgreen)](https://www.udemy.com/course/langgraph/?couponCode=NOV-2026)
 
 
 ## Features
@@ -54,12 +54,12 @@ To run this project, you will need to add the following environment variables to
 ```bash
 OPENAI_API_KEY=your_openai_api_key_here
 TAVILY_API_KEY=your_tavily_api_key_here  # For web search capabilities
-LANGCHAIN_API_KEY=your_langchain_api_key_here  # Optional, for tracing
-LANGCHAIN_TRACING_V2=true                      # Optional
-LANGCHAIN_PROJECT=agentic-rag                  # Optional
+LANGSMITH_API_KEY=your_langsmith_api_key_here  # Optional, for tracing
+LANGSMITH_TRACING=true                         # Optional
+LANGSMITH_PROJECT=agentic-rag                  # Optional
 ```
 
-> **Important Note**: If you enable tracing by setting `LANGCHAIN_TRACING_V2=true`, you must have a valid LangSmith API key set in `LANGCHAIN_API_KEY`. Without a valid API key, the application will throw an error.
+> **Important Note**: If you enable tracing by setting `LANGSMITH_TRACING=true`, you must have a valid LangSmith API key set in `LANGSMITH_API_KEY`. Without a valid API key, the application will throw an error.
 
 ## Getting Started
 
